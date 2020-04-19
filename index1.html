@@ -1,0 +1,50 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function myGrade(count) {
+            let arrayP = [];
+            for (let i = 1; i <= count; i++) {
+                let digit = ""
+                if (i % 5 === 0 || i % 3 === 0 || i % 2 === 0) {
+                    if (i % 2 === 0) {
+                        if (digit != "")
+                            digit += "-yu"
+                        else {
+                            digit = "yu"
+                        }
+                    }
+                    if (i % 3 === 0) {
+                        if (digit != "")
+                            digit += "-gi"
+                        else {
+                            digit = "gi"
+                        }
+                    }
+                    if (i % 5 === 0) {
+                        if (digit != "")
+                            digit += "-oh"
+                        else {
+                            digit = "oh"
+                        }
+                    }
+                }
+                else {
+                    digit = i
+                }
+                arrayP.push(digit)
+            }
+            alert(arrayP);
+            console.log(arrayP);
+        }
+        myGrade(100)
+    </script>
+</body>
+
+</html>
